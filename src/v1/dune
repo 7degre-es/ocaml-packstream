@@ -1,0 +1,4 @@
+(library
+ (name packstream_v1)
+ (public_name packstream.v1)
+ (libraries integers angstrom fmt faraday common))

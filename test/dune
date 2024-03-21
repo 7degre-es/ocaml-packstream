@@ -1,0 +1,30 @@
+(tests
+ (names value_tests)
+ (libraries alcotest packstream common)
+ (preprocess
+  (pps ppx_blob))
+ (preprocessor_deps
+  truth.bin
+  untruth.bin
+  serially_increasing_list.bin
+  small_dictionary.bin
+  string.bin
+  float.bin
+  nan.bin
+  inf.bin
+  neg_inf.bin))
+
+(rule
+ (action
+  (run python python/generate.py))
+ (deps python/generate.py)
+ (targets
+  truth.bin
+  untruth.bin
+  serially_increasing_list.bin
+  small_dictionary.bin
+  string.bin
+  float.bin
+  nan.bin
+  inf.bin
+  neg_inf.bin))

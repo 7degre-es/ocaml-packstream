@@ -1,0 +1,4 @@
+(library
+ (name packstream)
+ (public_name packstream)
+ (libraries packstream_v1))
